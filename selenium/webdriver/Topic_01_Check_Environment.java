@@ -1,4 +1,4 @@
-package webdriver;
+package webdriver.webdriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +19,7 @@ public class Topic_01_Check_Environment {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://demo.guru99.com/v4/");
+
     }
 
     @Test
