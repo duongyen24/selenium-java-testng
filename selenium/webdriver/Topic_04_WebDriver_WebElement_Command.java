@@ -1,6 +1,7 @@
-package webdriver.javaTester;
+package webdriver.webdriver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class Topic_04_Webbrowser_command {
+public class Topic_04_WebDriver_WebElement_Command {
     WebDriver driver; // tuong tac voi trinh duyet
     WebElement element; // tuong tac voi web HTML element
 
@@ -60,8 +61,42 @@ public class Topic_04_Webbrowser_command {
         //tra ve gia tri nam trong attribute
         element.getAttribute("placeholder");
 
-        //tim data nam trong value attribute
+        //tim data nam trong attribute 'value'
         driver.findElement(By.id("firstName")).getAttribute("value");
+
+        //tra ve thuoc tinh css cua element nay
+        //font / size/ color
+        element.getCssValue("font-size");
+
+        element.getCssValue("background-color");
+
+        //test GUI: point/rectangle/size(visualize testing)
+        element.getLocation();
+        element.getRect();
+
+        //chup man hinh attach vao HTML report
+        element.getScreenshotAs(OutputType.FILE);
+
+        //tra ve gia tri dung or sai cua 1 element co the thao tac duoc hay k
+        //co bi disabled k
+        element.isEnabled();
+        //Enabled: true
+        //Disabled: false
+
+        //tra ve gia tri dung or sai cua 1 element da duoc chon roi hay chua
+        //checkbox / radio
+        element.isSelected();
+        //chon roi: true
+        //chua chon: false
+
+        //dropdown co thu vien Select xu ly
+
+        //chi work voi form(register/login/search..)
+        //submit = enter vao 1 field nao do trong form
+        element.submit();
+
+
+
 
         
 
