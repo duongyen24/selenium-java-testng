@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class Topic_04_WebDriver_WebElement_Excersise_2 {
+public class Topic_05_WebBrowser_WebElement_Excersise_2 {
     WebDriver driver; // tuong tac voi trinh duyet
     WebElement element; // tuong tac voi web HTML element
 

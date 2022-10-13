@@ -1,7 +1,6 @@
 package webdriver.webdriver;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class Topic_04_WebDriver_WebElement_Excersise {
+public class Topic_05_WebBrowser_WebElement_Excersise {
     WebDriver driver; // tuong tac voi trinh duyet
     WebElement element; // tuong tac voi web HTML element
 

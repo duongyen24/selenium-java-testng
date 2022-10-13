@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class Topic_03_XpathandCSS {
+public class Topic_04_XpathandCSS {
     WebDriver driver;
 
     @BeforeClass
