@@ -2,6 +2,7 @@ package webdriver.webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -9,11 +10,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import javax.print.attribute.standard.PrinterMakeAndModel;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Topic_07_Default_Dropdown {
+public class Topic_08_Default_Dropdown {
     WebDriver driver; //khai bao
     Select select; // khai bao
     Random rand;
@@ -74,6 +75,24 @@ public class Topic_07_Default_Dropdown {
 
 
     }
+
+    @Test
+    public void TC_04(){
+        driver.get("https://www.rode.com/wheretobuy");
+
+        select = new Select(driver.findElement(By.cssSelector("select#country")));
+        sleepInSecond(3);
+        select.selectByVisibleText("Vietnam");
+
+        Assert.assertEquals(select.getFirstSelectedOption().getText(),"Vietnam");
+
+        List<WebElement> dealers = driver.findElements(By.cssSelector("div.p-1 h4"));
+        for (WebElement temp: dealers){
+            System.out.println(temp.getText());
+        }
+    }
+
+
 
 
     @AfterClass
