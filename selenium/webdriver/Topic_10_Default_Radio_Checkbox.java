@@ -20,6 +20,7 @@ public class Topic_10_Default_Radio_Checkbox {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/browserDrivers/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
     }
 
     @Test
@@ -68,6 +69,16 @@ public class Topic_10_Default_Radio_Checkbox {
         for (WebElement checkbox : selectAll){
             Assert.assertTrue(checkbox.isSelected());
         }
+    }
+
+    @Test
+
+    public void TC_02(){
+        driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");
+        sleepInSecond(5);
+        //check
+        checkCheckboxorRadioButton("//label[text()='Luggage compartment cover']//preceding-sibling::input");
+        Assert.assertTrue(driver.findElement(By.xpath("//label[text()='Luggage compartment cover']//preceding-sibling::input")).isSelected());
     }
 
 
