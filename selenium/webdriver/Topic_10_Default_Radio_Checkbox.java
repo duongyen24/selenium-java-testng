@@ -95,6 +95,7 @@ public class Topic_10_Default_Radio_Checkbox {
 
     //check xem co select hay chua de verify
     public boolean isSelected(String xpathLocator){
+
         return driver.findElement(By.xpath(xpathLocator)).isSelected();
     }
 
