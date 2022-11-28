@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="testng">
+       <!-- <classes>
+            <class name="webdriver.testng.TC01_Annotation"></class>
+        </classes> !-->
+        <!--  <groups>
+             <run>
+                 <include name="admin"></include>
+             </run>
+         </groups>
+         <packages>
+             <package name="webdriver.tiki.admin"></package>
+         </packages> !-->
+
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="webdriver.testng.TC05_Parameter"></class>
+        </classes>
+     </test>
+ </suite>
